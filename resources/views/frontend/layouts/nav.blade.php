@@ -58,14 +58,14 @@
                         @if(Auth::guard('user')->check())
                             <ul class="menu-ul">
                                 <li class="item"><a href="#" class="link link-primary">Тарифы</a></li>
-                                <li class="item"><a href="#" class="link link-color">Магазины</a></li>
+                                <li class="item"><a href="{{route('shops')}}" class="link link-color">Магазины</a></li>
                                 <li class="item"><a href="{{route('cargo')}}" class="link">OkiLogistic</a></li>
                                 <li class="item"><a href="{{route('faq')}}" class="link">FAQ</a></li>
                                 <li class="item"><a href="{{route('contacts')}}" class="link">Контакты</a></li>
                             </ul>
                         @else
                             <ul class="menu-ul">
-                                <li class="item"><a href="#" class="link link-pink">Регистрация</a></li>
+                                <li class="item"><a href="{{route('user.register')}}" class="link link-pink">Регистрация</a></li>
                             </ul>
                         @endif
                     </div>

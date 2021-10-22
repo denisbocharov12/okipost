@@ -15,8 +15,7 @@
                 <div class="col-md-3 col-12 col-footer-menu">
                     <ul class="footer-menu footer-menu-one">
                         <li class="item"><a href="#">Тарифы</a></li>
-                        <li class="item"><a href="#">Калькулятор</a></li>
-                        <li class="item"><a href="#">Online Shopping</a></li>
+                        <li class="item"><a href="{{route('main')}}">Калькулятор</a></li>
                         <li class="item"><a href="{{route('adresses')}}">Адреса</a></li>
                         <li class="item"><a href="#">О нас</a></li>
                         <li class="item"><a href="{{route('contacts')}}">Контакты</a></li>
@@ -24,9 +23,9 @@
                 </div>
                 <div class="col-md-3 col-12 col-footer-menu">
                     <ul class="footer-menu">
-                        <li class="item"><a href="#">Мой аккаунт</a></li>
+                        <li class="item"><a href="{{route('user.auth')}}">Мой аккаунт</a></li>
                         <li class="item"><a href="{{route('faq')}}">FAQ</a></li>
-                        <li class="item"><a href="#">Список магазинов</a></li>
+                        <li class="item"><a href="{{route('shops')}}">Список магазинов</a></li>
                         <li class="item"><a href="#">Инструкции</a></li>
                         <li class="item"><a data-fancybox data-src="#policy-page" data-touch="false" href="javascript:;">Политика конфиденциальности</a></li>
                     </ul>
@@ -36,7 +35,7 @@
                         <a class="social-item" href="https://www.instagram.com/okipost_moldova/" target="_blank">
                             <i class="fa fa-instagram"></i>
                         </a>
-                        <a class="social-item" href="#">
+                        <a class="social-item" href="https://www.facebook.com/okipostmd" target="_blank">
                             <i class="fa fa-facebook"></i>
                         </a>
                         <a class="social-item" href="#">
