@@ -7,7 +7,7 @@
         </div>
         <div class="tarif">
             <p>Тариф:</p>
-            <strong>12.5 $ за 1 кг</strong>
+            <strong>14 $ за 1 кг</strong>
         </div>
         <div class="obves">
             <p>Объемный вес:</p>
