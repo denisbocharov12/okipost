@@ -5,8 +5,6 @@ namespace App\Http\Controllers\backEnd;
 use App\Http\Controllers\Controller;
 use App\Models\IurClients;
 use App\Models\IurServices;
-use App\Models\PayedModel;
-use App\Models\User;
 use PDF;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -168,19 +166,16 @@ class CompanyController extends Controller
     }
 
     public function PDFView(Request $request) {
-        $id = $request->input('payed');
-        $code = $request->input('code');
-        $payed = PayedModel::where('id', $id)->first();
-        $user = User::where('code',$code)->first();
-        $pdf = PDF::loadView('pdf.payed.pdf', compact(['payed','user']))->setOptions(['defaultFont' => 'sans-serif']);
+        $id = $request->input('company');
+        $company = IurClients::where('id', $id)->get();
+        $pdf = PDF::loadView('pdf.services.pdf', compact(['company']));
         return $pdf->stream();
     }
     public function GeneratePDF(Request $request){
-        $id = $request->input('payed');
-        $code = $request->input('code');
-        $payed = PayedModel::where('id', $id)->first();
-        $user = User::where('code',$code)->first();
-        $pdf = PDF::loadView('pdf.payed.download', compact(['payed', 'user']))->setOptions(['defaultFont' => 'sans-serif']);
+        $id = $request->input('order');
+        $order = Order::where('id', $id)->get();
+        $order_items = OrderItem::where('order_id', $id)->get();
+        $pdf = PDF::loadView('backend.admin.pdf.invoice', compact(['order','order_items']));
         return $pdf->download('order.pdf');
     }
 }
