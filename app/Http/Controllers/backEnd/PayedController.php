@@ -8,7 +8,6 @@ use App\Models\PayedModel;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use PDF;
 
 class PayedController extends Controller
 {
