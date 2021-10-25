@@ -264,6 +264,7 @@ class UserController extends Controller
         }
         $userPackage->additional_services = json_encode($add, true);
         $userPackage->info = $info;
+        $userPackage->code = Auth::guard('user')->user()->code;
         $userPackage->save();
         if ($c == 'china' || $c == 'usa' || $c == 'germany'){
             $data_package = $this->userService->AddPackage(

@@ -887,7 +887,7 @@ header{
             top: -200vh;
             left: 0;
             width: 100%;
-            background-color: #404040;
+            background-color: $white;
             &__content{
                 position: relative;
                 width: 100%;
@@ -905,7 +905,7 @@ header{
                     width: 8px;
                 }
                 &::-webkit-scrollbar-track {
-                    background-color: #404040;
+                    background-color: $white;
                 }
                 &::-webkit-scrollbar-thumb {
                     background-color: $pink;
@@ -937,7 +937,7 @@ header{
                                     outline: none;
                                     border: 0;
                                     background: transparent;
-                                    color: $white;
+                                    color: #303030;
                                     i{
                                         font-size: 28px;
                                     }
@@ -955,7 +955,7 @@ header{
                                     font-size: 1.5rem;
                                     margin-bottom: 45px;
                                     text-align: left;
-                                    color: $white;
+                                    color: #252525;;
                                     text-align: left;
                                 }
                                 .menu-ul{
@@ -976,7 +976,7 @@ header{
                                         .link{
                                             font-size: 20px;
                                             text-transform: uppercase;
-                                            color: #c6c6c6;
+                                            color: #303030;
                                             position: relative;
                                             font-weight: 600;
                                             &:before{
@@ -1008,7 +1008,7 @@ header{
                                         }
                                         .link.disabled{
                                             pointer-events: none; /* делаем ссылку некликабельной */
-                                            color: #939393; /* цвет текста для нективной ссылки */
+                                            color: #707070; /* цвет текста для нективной ссылки */
                                         }
                                     }
                                 }
@@ -1016,38 +1016,66 @@ header{
 
                         }
                     }
-                    .row-details{
-                        margin-top: 60px;
-                        .col-head{
-                            h2{
-                                font-size: 1.8rem;
-                                color: $white;
-                                margin-left: 10px;
-                                text-transform: uppercase;
-                                font-weight: bold;
-                                text-align: left;
-                                margin-bottom: 10px;
-                            }
-                        }
-                        .col-product-item{
-                            a.product-wrap{
-                                position: relative;
-                                display: block;
-                                margin: 10px;
-                                span.product-site{
-                                    position: absolute;
-                                    right: 5px;
-                                    top: 5px;
-                                    background-color: $pink;
-                                    padding: 10px;
-                                    border-radius: 50px;
-                                    color: $white;
-                                    text-transform: uppercase;
-                                    font-size: 14px;
-                                    font-weight: 600;
-                                }
-                                img{
-
+                    //.row-details{
+                    //    margin-top: 60px;
+                    //    .col-head{
+                    //        h2{
+                    //            font-size: 1.8rem;
+                    //            color: $white;
+                    //            margin-left: 10px;
+                    //            text-transform: uppercase;
+                    //            font-weight: bold;
+                    //            text-align: left;
+                    //            margin-bottom: 10px;
+                    //        }
+                    //    }
+                    //    .col-product-item{
+                    //        a.product-wrap{
+                    //            position: relative;
+                    //            display: block;
+                    //            margin: 10px;
+                    //            span.product-site{
+                    //                position: absolute;
+                    //                right: 5px;
+                    //                top: 5px;
+                    //                background-color: $pink;
+                    //                padding: 10px;
+                    //                border-radius: 50px;
+                    //                color: $white;
+                    //                text-transform: uppercase;
+                    //                font-size: 14px;
+                    //                font-weight: 600;
+                    //            }
+                    //            img{
+                    //
+                    //            }
+                    //        }
+                    //    }
+                    //}
+                    .row-contacts{
+                        .col-contacts{
+                            padding-top: 60px;
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+                            flex-direction: column;
+                            .nav-header-contacts{
+                                li{
+                                    margin-bottom: 10px;
+                                    display: flex;
+                                    font-weight: 500;
+                                    a{
+                                        color: #303030;
+                                        &:hover{
+                                            color: #303030;
+                                        }
+                                    }
+                                    p{
+                                        color: #303030;
+                                    }
+                                    &:last-child{
+                                        margin-bottom: 0;
+                                    }
                                 }
                             }
                         }

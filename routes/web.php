@@ -16,6 +16,7 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\CalculatorController;
 use App\Http\Controllers\backEnd\CompanyController;
 use App\Http\Controllers\backEnd\SearchController;
+use App\Http\Controllers\backEnd\PayedController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -86,6 +87,13 @@ Route::group(['prefix'=>'admin','middleware'=>['admin','PreventBackHistory']],fu
     Route::post('company_status', [CompanyController::class, 'companyStatus'])->name('company.status');
     Route::post('company_delete', [CompanyController::class, 'companyDelete'])->name('company.delete');
 
+    // Payed Section
+    Route::resource('/payed', PayedController::class);
+    Route::post('payed_status', [PayedController::class, 'payedStatus'])->name('payed.status');
+    Route::post('payed_delete', [PayedController::class, 'payedDelete'])->name('payed.delete');
+
+    Route::get('view-pdf-payed', [CompanyController::class, 'PDFView'])->name('view.pdf.payed');
+    Route::get('download-pdf-payed', [CompanyController::class, 'GeneratePDF'])->name('download.pdf.payed');
     //PDF
     Route::get('view-pdf', [CompanyController::class, 'PDFView'])->name('view.pdf');
     Route::get('download-pdf', [CompanyController::class, 'GeneratePDF'])->name('download.pdf');

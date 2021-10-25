@@ -86,16 +86,6 @@
                 $("#"+datasection).fadeIn();
                 $('.section-link').removeClass('active');
                 $(this).addClass('active');
-                // if($(this).hasClass('active')){
-                //     return;
-                // }else{
-                //     var datasection = $(this).data('section');
-                //     $('.col-contact-map.active').slideDown('300');
-                //     $('.col-contact-map.active').removeClass('active');
-                //     $('#'+datasection).slideUp('400', function() {
-                //         $('#'+datasection).addClass('active');
-                //     });
-                // }
             })
         });
     </script>

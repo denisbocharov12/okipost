@@ -94,24 +94,24 @@ class UserService
         $comment,
         $add
         ){
-        $useronfo = [
-            'c'=>$c,
-            'user_to'=>$user_to,
-            'price'=>$price,
-            'currency'=>$currency,
-            'address1' => $address['address1'],
-            'city' => $address['city'],
-            'name' => $address['name'],
-            'surname' => $address['surname'],
-            'phone' => $address['phone'],
-            'passport' => $address['passport'],
-            'track'=>$track,
-            'delivery_method'=>$delivery_method_select,
-            'comment' => $comment,
-            'url'=>$url,
-            'info'=>$info,
-            'add'=>$add
-        ];
+//        dd($useronfo = [
+//            'c'=>$c,
+//            'user_to'=>$user_to,
+//            'price'=>$price,
+//            'currency'=>$currency,
+//            'address1' => $address['address1'],
+//            'city' => $address['city'],
+//            'name' => $address['name'],
+//            'surname' => $address['surname'],
+//            'phone' => $address['phone'],
+//            'passport' => $address['passport'],
+//            'track'=>$track,
+//            'delivery_method'=>$delivery_method_select,
+//            'comment' => $comment,
+//            'url'=>$url,
+//            'info'=>$info,
+//            'add'=>$add
+//        ]);
         $response = Http::asForm()->withHeaders([
             "auth"  => config('auth_okipost')['auth']
         ])->post("https://okipost.com/api/?lang=md&action=addparcel&tkn=".Auth::guard('user')->user()->token."",
