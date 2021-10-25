@@ -857,7 +857,7 @@ header .section-header .nav {
   top: -200vh;
   left: 0;
   width: 100%;
-  background-color: #404040;
+  background-color: #fff;
 }
 header .section-header .nav__content {
   position: relative;
@@ -877,7 +877,7 @@ header .section-header .nav__content::-webkit-scrollbar {
   width: 8px;
 }
 header .section-header .nav__content::-webkit-scrollbar-track {
-  background-color: #404040;
+  background-color: #fff;
 }
 header .section-header .nav__content::-webkit-scrollbar-thumb {
   background-color: #DD3D83;
@@ -907,7 +907,7 @@ header .section-header .nav__content .container-nav .row-primary .col-exit .menu
   outline: none;
   border: 0;
   background: transparent;
-  color: #fff;
+  color: #303030;
 }
 header .section-header .nav__content .container-nav .row-primary .col-exit .menu-icon-open button i {
   font-size: 28px;
@@ -921,7 +921,7 @@ header .section-header .nav__content .container-nav .row-menus .col-menu-nav .me
   font-size: 1.5rem;
   margin-bottom: 45px;
   text-align: left;
-  color: #fff;
+  color: #252525;
   text-align: left;
 }
 header .section-header .nav__content .container-nav .row-menus .col-menu-nav .menu-block .menu-ul .item {
@@ -942,7 +942,7 @@ header .section-header .nav__content .container-nav .row-menus .col-menu-nav .me
 header .section-header .nav__content .container-nav .row-menus .col-menu-nav .menu-block .menu-ul .item .link {
   font-size: 20px;
   text-transform: uppercase;
-  color: #c6c6c6;
+  color: #303030;
   position: relative;
   font-weight: 600;
 }
@@ -972,37 +972,32 @@ header .section-header .nav__content .container-nav .row-menus .col-menu-nav .me
 header .section-header .nav__content .container-nav .row-menus .col-menu-nav .menu-block .menu-ul .item .link.disabled {
   pointer-events: none;
   /* делаем ссылку некликабельной */
-  color: #939393;
+  color: #707070;
   /* цвет текста для нективной ссылки */
 }
-header .section-header .nav__content .container-nav .row-details {
-  margin-top: 60px;
+header .section-header .nav__content .container-nav .row-contacts .col-contacts {
+  padding-top: 60px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
 }
-header .section-header .nav__content .container-nav .row-details .col-head h2 {
-  font-size: 1.8rem;
-  color: #fff;
-  margin-left: 10px;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-align: left;
+header .section-header .nav__content .container-nav .row-contacts .col-contacts .nav-header-contacts li {
   margin-bottom: 10px;
+  display: flex;
+  font-weight: 500;
 }
-header .section-header .nav__content .container-nav .row-details .col-product-item a.product-wrap {
-  position: relative;
-  display: block;
-  margin: 10px;
+header .section-header .nav__content .container-nav .row-contacts .col-contacts .nav-header-contacts li a {
+  color: #303030;
 }
-header .section-header .nav__content .container-nav .row-details .col-product-item a.product-wrap span.product-site {
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  background-color: #DD3D83;
-  padding: 10px;
-  border-radius: 50px;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 600;
+header .section-header .nav__content .container-nav .row-contacts .col-contacts .nav-header-contacts li a:hover {
+  color: #303030;
+}
+header .section-header .nav__content .container-nav .row-contacts .col-contacts .nav-header-contacts li p {
+  color: #303030;
+}
+header .section-header .nav__content .container-nav .row-contacts .col-contacts .nav-header-contacts li:last-child {
+  margin-bottom: 0;
 }
 header .section-header .nav__list-item {
   position: relative;

@@ -17,6 +17,12 @@
                 </li>
             </ul><!-- .nk-menu-sub -->
         </li><!-- .nk-menu-item -->
+        <li class="nk-menu-item">
+            <a href="{{route('payed.index')}}" class="nk-menu-link" data-original-title="" title="">
+                <span class="nk-menu-icon"><em class="icon ni ni-cc-alt2-fill"></em></span>
+                <span class="nk-menu-text">Оплаченные</span>
+            </a>
+        </li>
         <li class="nk-menu-item has-sub">
             <a href="#" class="nk-menu-link nk-menu-toggle">
                 <span class="nk-menu-icon"><em class="icon ni ni-users-fill"></em></span>
