@@ -92,8 +92,8 @@ Route::group(['prefix'=>'admin','middleware'=>['admin','PreventBackHistory']],fu
     Route::post('payed_status', [PayedController::class, 'payedStatus'])->name('payed.status');
     Route::post('payed_delete', [PayedController::class, 'payedDelete'])->name('payed.delete');
 
-    Route::get('view-pdf-payed', [CompanyController::class, 'PDFView'])->name('view.pdf.payed');
-    Route::get('download-pdf-payed', [CompanyController::class, 'GeneratePDF'])->name('download.pdf.payed');
+    Route::get('view-pdf-payed', [PayedController::class, 'PDFView'])->name('view.pdf.payed');
+    Route::get('download-pdf-payed', [PayedController::class, 'GeneratePDF'])->name('download.pdf.payed');
     //PDF
     Route::get('view-pdf', [CompanyController::class, 'PDFView'])->name('view.pdf');
     Route::get('download-pdf', [CompanyController::class, 'GeneratePDF'])->name('download.pdf');
