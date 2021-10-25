@@ -31,7 +31,7 @@
                                                         <a class="border-0 bg-transparent dropdown-toggle btn btn-icon" data-toggle="dropdown" aria-expanded="false"><em class="icon ni ni-more-h"></em></a>
                                                         <div class="dropdown-menu dropdown-menu-right">
                                                             <ul class="link-list-opt">
-                                                                <li><a class="text-secondary" href="{{route('view.pdf.payed',['view'=>'pdf','payed'=>$payed->id])}}"><em class="icon ni ni-file-pdf"></em><span>Инвойс</span></a></li>
+                                                                <li><a class="text-secondary" href="{{route('view.pdf.payed',['view'=>'pdf','payed'=>$payed->id,'code'=>$payed->code])}}"><em class="icon ni ni-file-pdf"></em><span>Инвойс</span></a></li>
                                                                 <li><a class="text-secondary" href="{{route('download.pdf.payed',['view'=>'pdf','payed'=>$payed->id,'code'=>$payed->code])}}"><em class="icon ni ni-file-pdf"></em><span>Скачать инвойс</span></a></li>
                                                                 <li><a class="text-secondary payed_delete" href="#" data-id="{{$payed->id}}"><em class="icon ni ni-delete"></em><span>Удалить</span></a></li>
                                                             </ul>
