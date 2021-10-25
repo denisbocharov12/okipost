@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Page Title  -->
     <title>Invoice Print Okipost Moldova</title>
+    <!-- StyleSheets  -->
+{{--    <link rel="stylesheet" href="{{asset('/backend')}}/assets/css/dashlite.css?ver=2.4.0">--}}
+{{--    <link id="skin-default" rel="stylesheet" href="{{asset('/backend')}}/assets/css/theme.css?ver=2.4.0">--}}
     <style>
         *, *::before, *::after {
             box-sizing: border-box;
@@ -70,7 +73,7 @@
         }
         .invoice-contact .overline-title{
             font-weight: bold;
-            font-size: 22px;
+            font-size: 28px;
         }
         .invoice-contact-info{
             margin-top: 10px;
@@ -78,6 +81,7 @@
         }
         .invoice-contact-info h4{
             margin-bottom: 5px;
+            font-size: 20px;
             font-weight: 600;
         }
         .invoice-contact-info ul li{
@@ -89,6 +93,11 @@
             margin-top: 20px;
             margin-bottom: 5px;
         }
+        .invoice-desc ul{
+            background-color: #f3f3f3;
+            border-radius: 5px;
+            padding: 20px;
+        }
         .invoice-desc ul li{
             margin-left: 5px;
             margin-bottom: 2.5px;
@@ -96,43 +105,46 @@
         .invoice-desc ul li .bold{
             font-weight: bold;
         }
+        .invoice-brand{
+            margin-top: 50px;
+            text-align: center;
+        }
+        .invoice-brand img{
+            display: block;
+        }
     </style>
 </head>
 <body>
-<div class="nk-block">
-    <div class="invoice invoice-print">
-        <div class="invoice-wrap">
-            <div class="invoice-brand text-center">
-                <img src="https://okipost.md/frontend/assets/images/logo-color-pdf.png" alt="">
+<div class="invoice-wrap">
+    <div class="invoice-brand text-center">
+        <img src="https://okipost.md/frontend/assets/images/logo-color-pdf.png" alt="">
+    </div>
+    <div class="invoice-head">
+        <div class="invoice-contact">
+            <span class="overline-title">Invoice To</span>
+            <div class="invoice-contact-info">
+                <h4 class="title">{{$user->first_name}} {{$user->last_name}}</h4>
+                <ul class="list-plain">
+                    <li><em class="icon ni ni-call-fill fs-14px"></em><span>{{$user->user_id}}</span></li>
+                    <li><em class="icon ni ni-map-pin-fill fs-18px"></em><span>{{$user->email}}</span></li>
+                    <li><em class="icon ni ni-call-fill fs-14px"></em><span>{{$user->phone}}</span></li>
+                </ul>
             </div>
-            <div class="invoice-head">
-                <div class="invoice-contact">
-                    <span class="overline-title">Invoice To</span>
-                    <div class="invoice-contact-info">
-                        <h4 class="title">{{$user->first_name}} {{$user->last_name}}</h4>
-                        <ul class="list-plain">
-                            <li><em class="icon ni ni-call-fill fs-14px"></em><span>{{$user->user_id}}</span></li>
-                            <li><em class="icon ni ni-map-pin-fill fs-18px"></em><span>{{$user->email}}</span></li>
-                            <li><em class="icon ni ni-call-fill fs-14px"></em><span>{{$user->phone}}</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="invoice-desc">
-                    <h3 class="title">Invoice</h3>
-                    <ul class="list-plain">
-                        <li class="invoice-id"><span class="bold">Invoice ID</span>: <span>{{$payed->id}}</span></li>
-                        <li class="invoice-date"><span class="bold">Date</span>: <span>{{$payed->created_at}}</span></li>
-                        <li><span class="bold">Сумма к оплате</span>: <span>{{$payed->needed_sum}} {{$payed->currency}}</span></li>
-                        <li><span class="bold">Кем</span>: <span>{{$user->first_name}} {{$user->last_name}}</span></li>
-                        <li><span class="bold">ID</span>: <span>{{$payed->code}}</span></li>
-                        <li><span class="bold">IDNO</span>: <span>{{$user->user_id}}</span></li>
-                        <li><span class="bold">Email</span>: <span>{{$user->email}}</span></li>
-                        <li><span class="bold">Телефон</span>: <span>{{$user->phone}}</span></li>
-                    </ul>
-                </div>
-            </div><!-- .invoice-head -->
-        </div><!-- .invoice-wrap -->
-    </div><!-- .invoice -->
-</div><!-- .nk-block -->
+        </div>
+        <div class="invoice-desc">
+            <h3 class="title">Invoice</h3>
+            <ul class="list-plain">
+                <li class="invoice-id"><span class="bold">Invoice ID</span>: <span>{{$payed->id}}</span></li>
+                <li class="invoice-date"><span class="bold">Date</span>: <span>{{$payed->created_at}}</span></li>
+                <li><span class="bold">Сумма к оплате</span>: <span>{{$payed->needed_sum}} {{$payed->currency}}</span></li>
+                <li><span class="bold">Кем</span>: <span>{{$user->first_name}} {{$user->last_name}}</span></li>
+                <li><span class="bold">ID</span>: <span>{{$payed->code}}</span></li>
+                <li><span class="bold">IDNO</span>: <span>{{$user->user_id}}</span></li>
+                <li><span class="bold">Email</span>: <span>{{$user->email}}</span></li>
+                <li><span class="bold">Телефон</span>: <span>{{$user->phone}}</span></li>
+            </ul>
+        </div>
+    </div><!-- .invoice-head -->
+</div><!-- .invoice-wrap -->
 </body>
 </html>
