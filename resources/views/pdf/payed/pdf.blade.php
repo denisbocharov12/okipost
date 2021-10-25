@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html lang="zxx" class="js">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Fav Icon  -->
-    <link rel="shortcut icon" href="{{asset('frontend')}}/assets/images/favicon.ico">
     <!-- Page Title  -->
     <title>Invoice Print Okipost Moldova</title>
     <style>
@@ -101,13 +98,12 @@
         }
     </style>
 </head>
-
 <body>
 <div class="nk-block">
     <div class="invoice invoice-print">
         <div class="invoice-wrap">
             <div class="invoice-brand text-center">
-                <img src=https://okipost.md/frontend/assets/images/logo-color-pdf.png" alt="">
+                <img src="https://okipost.md/frontend/assets/images/logo-color-pdf.png" alt="">
             </div>
             <div class="invoice-head">
                 <div class="invoice-contact">
@@ -139,5 +135,4 @@
     </div><!-- .invoice -->
 </div><!-- .nk-block -->
 </body>
-
 </html>

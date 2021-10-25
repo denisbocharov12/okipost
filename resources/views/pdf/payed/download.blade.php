@@ -107,7 +107,7 @@
     <div class="invoice invoice-print">
         <div class="invoice-wrap">
             <div class="invoice-brand text-center">
-                <img src=https://okipost.md/frontend/assets/images/logo-color-pdf.png" alt="">
+                <img src="https://okipost.md/frontend/assets/images/logo-color-pdf.png" alt="">
             </div>
             <div class="invoice-head">
                 <div class="invoice-contact">

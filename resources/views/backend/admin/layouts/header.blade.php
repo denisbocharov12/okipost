@@ -5,7 +5,7 @@
             <div class="nk-menu-trigger d-xl-none ml-n1">
                 <a href="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu"><em class="icon ni ni-menu"></em></a>
             </div>
-            <div class="nk-header-brand d-xl-none">
+            <div class="nk-header-brand d-xl-none" style="flex-shrink: inherit;">
                 <a href="/" class="logo-link" style="display: block">
                     <img style="width: 25%;" class="" src="{{asset('frontend')}}/assets/images/logo-color.svg" alt="logo-dark">
                 </a>
