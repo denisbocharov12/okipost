@@ -108,7 +108,7 @@ class PayedController extends Controller
         $code = $request->input('code');
         $payed = PayedModel::where('id', $id)->first();
         $user = User::where('code',$code)->first();
-        $pdf = PDF::loadView('pdf.payed.pdf', compact(['payed','user']))->setOptions(['defaultFont' => 'sans-serif']);
+        $pdf = PDF::loadView('pdf.payed.pdf', compact(['payed','user']))->setOptions(['isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true]);
         return $pdf->stream();
     }
     public function GeneratePDF(Request $request){
@@ -116,7 +116,7 @@ class PayedController extends Controller
         $code = $request->input('code');
         $payed = PayedModel::where('id', $id)->first();
         $user = User::where('code',$code)->first();
-        $pdf = PDF::loadView('pdf.payed.download', compact(['payed', 'user']))->setOptions(['defaultFont' => 'sans-serif']);
+        $pdf = PDF::loadView('pdf.payed.download', compact(['payed', 'user']))->setOptions(['isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true]);
         return $pdf->download('order.pdf');
     }
 }
