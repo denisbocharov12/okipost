@@ -17,6 +17,7 @@ use App\Http\Controllers\CalculatorController;
 use App\Http\Controllers\backEnd\CompanyController;
 use App\Http\Controllers\backEnd\SearchController;
 use App\Http\Controllers\backEnd\PayedController;
+use App\Http\Controllers\backEnd\PackagesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -70,6 +71,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
     Route::post('cargo-services',[PagesController::class,'cargoPost'])->name('cargo.post');
     Route::get('search',[SearchController::class, 'search'])->name('search');
     Route::get('contacts',[PagesController::class, 'contacts'])->name('contacts');
+    Route::get('about-us',[PagesController::class, 'aboutus'])->name('aboutus');
 
     Route::get('/administration',[AdminLoginController::class,'login'])->name('admin.login');
     Route::post('/admin-auth',[AdminLoginController::class,'auth'])->name('admin.auth');
@@ -94,6 +96,10 @@ Route::group(['prefix'=>'admin','middleware'=>['admin','PreventBackHistory']],fu
 
     Route::get('view-pdf-payed', [PayedController::class, 'PDFView'])->name('view.pdf.payed');
     Route::get('download-pdf-payed', [PayedController::class, 'GeneratePDF'])->name('download.pdf.payed');
+
+    // Packages Section
+    Route::resource('/packages', PackagesController::class);
+
     //PDF
     Route::get('view-pdf', [CompanyController::class, 'PDFView'])->name('view.pdf');
     Route::get('download-pdf', [CompanyController::class, 'GeneratePDF'])->name('download.pdf');

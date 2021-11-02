@@ -52,7 +52,8 @@ class UserController extends Controller
         if ($request->ajax()){
             $table = $request->table;
             $getTable = $this->userService->GetUserTable($table);
-            $render = view('frontend.pages.user._components.tab',compact(['getTable','table']))->render();
+            $mdl_to_usd = 17.6;
+            $render = view('frontend.pages.user._components.tab',compact(['getTable','table','mdl_to_usd']))->render();
             $responce['render'] = $render;
             $responce['table'] = $table;
             $responce['status'] = true;

@@ -24,7 +24,7 @@
                             <div class="shipping-wrap toggle-wrap-div shipping-unpaid">
                                 <string>Стоймость транспортировки</string>
                                 <h3>
-                                    {{$item['shipping_price']}} {{$item['currency']}}
+                                    {{$item['shipping_price']*$mdl_to_usd}} MDL
                                 </h3>
                             </div>
                         </div>

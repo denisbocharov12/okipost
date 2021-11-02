@@ -248,6 +248,7 @@ const app = (() => {
     const applyListeners = () => {
         menu.addEventListener('click', () => toggleClass(body, 'nav-active'));
         openMenu.addEventListener('click', () => toggleClass(body, 'nav-active'));
+
     };
 
     const toggleClass = (element, stringClass) => {
@@ -255,6 +256,15 @@ const app = (() => {
             element.classList.remove(stringClass);else
             element.classList.add(stringClass);
     };
+    anime({
+        targets: '#nav_image_bottom .lines',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutSine',
+        duration: 1500,
+        delay: function(el, i) { return i * 150 },
+        direction: 'alternate',
+        loop: true
+    });
     init();
 })();
 
