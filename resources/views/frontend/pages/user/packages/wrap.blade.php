@@ -121,7 +121,7 @@
                                     </li>
                                     <li>
                                         <a href="https://goo.gl/maps/tH1Bvxnq9v9P4HT37" target="_blank">
-                                            г. Кишинев , Колумна 135
+                                            г. Кишинев , ул. Колумна 135
                                         </a>
                                     </li>
                                 </ul>

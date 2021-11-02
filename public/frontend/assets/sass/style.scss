@@ -912,6 +912,16 @@ header{
                     border-radius: 10px;
                 }
                 .container-nav{
+                    position: relative;
+                    padding: 50px;
+                    .image-item{
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        svg{
+                            width: 320px;
+                        }
+                    }
                     .row-primary{
                         .col-logo{
                             display: flex;
@@ -953,7 +963,7 @@ header{
                                     text-transform: uppercase;
                                     font-weight: bold;
                                     font-size: 1.5rem;
-                                    margin-bottom: 45px;
+                                    margin-bottom: 30px;
                                     text-align: left;
                                     color: #252525;;
                                     text-align: left;
@@ -975,7 +985,7 @@ header{
                                         }
                                         .link{
                                             font-size: 20px;
-                                            text-transform: uppercase;
+                                            //text-transform: uppercase;
                                             color: #303030;
                                             position: relative;
                                             font-weight: 600;
@@ -1058,7 +1068,6 @@ header{
                             display: flex;
                             align-items: flex-start;
                             justify-content: flex-start;
-                            flex-direction: column;
                             .nav-header-contacts{
                                 li{
                                     margin-bottom: 10px;
@@ -1076,6 +1085,9 @@ header{
                                     &:last-child{
                                         margin-bottom: 0;
                                     }
+                                }
+                                &:last-child{
+                                    margin-left: 30px;
                                 }
                             }
                         }

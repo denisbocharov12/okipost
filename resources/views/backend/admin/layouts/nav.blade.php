@@ -18,6 +18,12 @@
             </ul><!-- .nk-menu-sub -->
         </li><!-- .nk-menu-item -->
         <li class="nk-menu-item">
+            <a href="{{route('packages.index')}}" class="nk-menu-link" data-original-title="" title="">
+                <span class="nk-menu-icon"><em class="icon ni ni-bag"></em></span>
+                <span class="nk-menu-text">Посылки</span>
+            </a>
+        </li>
+        <li class="nk-menu-item">
             <a href="{{route('payed.index')}}" class="nk-menu-link" data-original-title="" title="">
                 <span class="nk-menu-icon"><em class="icon ni ni-cc-alt2-fill"></em></span>
                 <span class="nk-menu-text">Оплаченные</span>
