@@ -201,27 +201,13 @@
                             <a href="tel:+(373) 797-900-08">+(373) 797-900-08</a>
                         </li>
                         <li>
-                            <p>Молдова, Комрат, ул. Победы 58</p>
+                            <p>Молдова, Кишинёв, ул. Колумна 135 / Молдова, Комрат, ул. Победы 58</p>
                         </li>
                         <li>
                             <a href="mailto:info@okipost.md">info@okipost.md</a>
                         </li>
                         <li>
                             <p>c 8:00 - 18:00 (Будни)</p>
-                        </li>
-                    </ul>
-                    <ul class="nav-header-contacts">
-                        <li>
-                            <a href="tel:+(373) 797-900-08">+(373) 797-900-08</a>
-                        </li>
-                        <li>
-                            <p>Молдова, Кишинёв, ул. Колумна 135</p>
-                        </li>
-                        <li>
-                            <a href="mailto:info@okipost.md">info@okipost.md</a>
-                        </li>
-                        <li>
-                            <p>c 9:00 - 17:00 (Будни)</p>
                         </li>
                     </ul>
                 </div>

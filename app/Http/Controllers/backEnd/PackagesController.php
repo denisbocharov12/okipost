@@ -25,7 +25,7 @@ class PackagesController extends Controller
                 ]))->render();
                 return response()->json(['html'=>$view,'status'=>true]);
             } else{
-                $packages = PackageModel::with('user')->where('track','LIKE','%'.$track."%")->get();
+                $packages = PackageModel::with('user')->where('track','LIKE','%'.$track."%")->orderBy('id', 'DESC')->get();
                 $view = view('backend.admin.pages.packages.components.package',compact([
                     'packages',
                 ]))->render();
