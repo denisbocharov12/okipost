@@ -5,16 +5,20 @@
 @endsection
 @section('content')
     <section class="section-cargo section-standart">
-            <span class="line line-1 content-hidden"></span>
-            <span class="line line-2 content-hidden"></span>
-            <span class="line line-3 content-hidden"></span>
+            <span class="line line-1 content-hidden content-second"></span>
+            <span class="line line-2 content-hidden content-second"></span>
+            <span class="line line-3 content-hidden content-second"></span>
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6 col-cargo-heading">
                     <h1 class="content-hidden">OkiLogistic</h1>
                     <h2 class="content-hidden">Ваш надежный <span class="color">партнер</span> в Китае</h2>
                     <p class="content-hidden">Мы несем полную ответственность за сохранность вашего груза, обеспечиваем стабильную доставку товара при любых внешних обстоятельствах.</p>
-                    <button data-fancybox="" data-touch="false" data-src="#registrationService" class="btn-cargo content-hidden">Заказать услугу</button>
+                    <div class="contact-block">
+                        <a href="tel:+37379034645">+373 790 34 645</a>
+                        <a href="mailto:info@okilogistic.md">info@okilogistic.md</a>
+                    </div>
+                    <button data-fancybox="" data-touch="false" data-src="#registrationService" class="btn-cargo content-hidden ">Заказать услугу</button>
                 </div>
                 <div class="col-12 col-md-6 col-cargo-image">
                     <img class="content-hidden" src="{{asset('frontend')}}/assets/images/cargo/cargo-plane.svg" alt="">
@@ -23,9 +27,9 @@
         </div>
     </section>
     <section class="section-standart section-cargo-services">
-        <span class="line line-1 content-hidden"></span>
-        <span class="line line-2 content-hidden"></span>
-        <span class="line line-3 content-hidden"></span>
+        <span class="line line-1 content-hidden content-second"></span>
+        <span class="line line-2 content-hidden content-second"></span>
+        <span class="line line-3 content-hidden content-second"></span>
         <div class="container">
             <div class="row">
                 <div class="col-12 col-heading">
@@ -165,13 +169,6 @@
                 beforeSend:function () {
                     $('#serviceSubmit').html('<i class="fa fa-spin fa-spinner"></i>');
                 },
-                // complete:function (response) {
-                //     if(!response['status']){
-                //     } else{
-                //         $('#registerSubmit').html('<i class="fa fa-check" style="color: white"></i>');
-                //     }
-
-                // },
                 success:function (response) {
                     if (response['status']){
                         $('#registrationService').html('<h3 style="text-align: center;">'+response['msg']+'</h3>');

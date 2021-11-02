@@ -987,7 +987,7 @@ header .section-header .nav__content .container-nav .row-menus .col-menu-nav .me
   /* цвет текста для нективной ссылки */
 }
 header .section-header .nav__content .container-nav .row-contacts .col-contacts {
-  padding-top: 60px;
+  padding-top: 100px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -1008,9 +1008,6 @@ header .section-header .nav__content .container-nav .row-contacts .col-contacts 
 }
 header .section-header .nav__content .container-nav .row-contacts .col-contacts .nav-header-contacts li:last-child {
   margin-bottom: 0;
-}
-header .section-header .nav__content .container-nav .row-contacts .col-contacts .nav-header-contacts:last-child {
-  margin-left: 30px;
 }
 header .section-header .nav__list-item {
   position: relative;
@@ -3147,9 +3144,20 @@ footer#footer-site .col-footer-newsletter .form-newsletter p {
   flex-direction: column;
   padding-top: 150px;
 }
+.section-cargo .col-cargo-heading .contact-block {
+  margin-top: 20px;
+}
+.section-cargo .col-cargo-heading .contact-block a {
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+}
+.section-cargo .col-cargo-heading .contact-block a:last-child {
+  margin-left: 15px;
+}
 .section-cargo .col-cargo-heading .btn-cargo {
   display: block;
-  margin-top: 25px;
+  margin-top: 15px;
   outline: 0;
   border: 2px solid #DD3D83;
   border-radius: 10px;
@@ -4452,6 +4460,18 @@ footer#footer-site .col-footer-newsletter .form-newsletter p {
   }
 }
 @media (min-width: 767.98px) and (max-width: 991.98px) {
+  .section-cargo .col-cargo-heading .contact-block {
+    display: flex;
+    flex-direction: column;
+  }
+  .section-cargo .col-cargo-heading .contact-block a {
+    margin-bottom: 10px;
+  }
+  .section-cargo .col-cargo-heading .contact-block a:last-child {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
   .section-contacts.section-standart .col-contact-info .wrap-hot-line {
     padding: 30px 20px 30px 20px;
     margin-bottom: 45px;
@@ -5075,6 +5095,18 @@ footer#footer-site .col-footer-newsletter .form-newsletter p {
   }
 }
 @media (max-width: 575.98px) {
+  .section-cargo .col-cargo-heading .contact-block {
+    display: flex;
+    flex-direction: column;
+  }
+  .section-cargo .col-cargo-heading .contact-block a {
+    margin-bottom: 10px;
+  }
+  .section-cargo .col-cargo-heading .contact-block a:last-child {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
   .section-partners .col-slider-partners-wrap .slider-partners .item {
     padding: 30px 100px;
   }

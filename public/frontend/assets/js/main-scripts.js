@@ -230,6 +230,50 @@ $(window).scroll(function() {
         scale      : 1,
         viewFactor : 0,
     }, 150);
+    sr.reveal('.section-cargo .col-cargo-heading .contact-block', {
+        duration   : 550,
+        distance   : '400px',
+        easing     : 'ease-out',
+        origin     : 'left',
+        reset      : false,
+        interval: 250,
+        opacity: 0 ,
+        scale      : 1,
+        viewFactor : 0,
+    }, 150);
+    sr.reveal('.section-cargo .col-cargo-heading button', {
+        duration   : 600,
+        distance   : '400px',
+        easing     : 'ease-out',
+        origin     : 'left',
+        reset      : false,
+        interval: 250,
+        opacity: 0 ,
+        scale      : 1,
+        viewFactor : 0,
+    }, 150);
+    sr.reveal('.section-cargo .content-second', {
+        duration   : 400,
+        distance   : '400px',
+        easing     : 'ease-out',
+        origin     : 'left',
+        reset      : false,
+        interval: 250,
+        opacity: 0 ,
+        scale      : 1,
+        viewFactor : 0,
+    }, 150);
+    sr.reveal('.section-cargo-services .content-second', {
+        duration   : 400,
+        distance   : '400px',
+        easing     : 'ease-out',
+        origin     : 'right',
+        reset      : false,
+        interval: 250,
+        opacity: 0 ,
+        scale      : 1,
+        viewFactor : 0,
+    }, 150);
 })();
 // MENU
 const app = (() => {
