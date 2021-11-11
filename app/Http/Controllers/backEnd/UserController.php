@@ -40,7 +40,7 @@ class UserController extends Controller
     public function dashboard(Request $request){
         if (Auth::guard('user')->check()){
             //dd($this->userService->GetUser());
-            //dd($this->userService->GetUserTable('4'));
+            //dd($this->userService->GetUserTable('2'));
             $userTables = $this->userService->GetUserTables();
             $user = Auth::guard('user')->user();
             return view('frontend.pages.user.dashboard', compact(['user','userTables']));
