@@ -9,7 +9,7 @@
 {{--                            <span class="status">{{$package['track info']['status']}}</span>--}}
                             <div class="package-header">
                                 <h1 style="margin-top: 5px">Посылка №{{$package['track info']['id']}}</h1>
-                                <h2 style="margin-top: 5px">Пользователь: {{\App\Models\User::where('code','111572')->first()->first_name}} {{\App\Models\User::where('code','111572')->first()->last_name}} OKI-{{$package['track info']['user']}}</h2>
+                                <h2 style="margin-top: 5px">Пользователь: {{\App\Models\User::where('code',$package['track info']['user'])->first()->first_name}} {{\App\Models\User::where('code',$package['track info']['user'])->first()->last_name}} OKI-{{$package['track info']['user']}}</h2>
 
                             </div>
                             <div class="package-content">
